@@ -147,3 +147,19 @@ Options considered.
 Evidence. The sketch was read after it landed. The brand change is in `docs/types.md`.
 
 Who decided. The agent. Wail still reviews the contract before implementation.
+
+## 2026-11-26 Type sketch A arrived last
+
+Decision. The contract stands. The last sketch agrees on the proxy label, a public PN with no submission time, estimate money, and rule 3A as the only replay argument.
+
+Left as already decided.
+
+- Period numbers stay a branded index. The parser rejects an index above `periodsInDay`. The sketch writes periods 1 through 50 as a union. The contract keeps the shorter form.
+- `kind: "constraintUnitProxy"` is the proxy label. A field fixed at `officialPublicMap: false` adds no fact.
+- The third loop step has a further system bid. It has no day-ahead window and no `constraintStillRelevant` flag.
+- `detectLoops` stays a batch over the day's bids. A confirmed finding already requires `TimestampedFpnRise`, so a public PN cannot fill that variant.
+- The ancillary flag can be `held` or `notHeld` when a later source exists. The MVP parser returns `unknown`.
+
+Evidence. The sketch was read from the arena output after it landed. `docs/types.md` is unchanged by this read.
+
+Who decided. The agent. Wail still reviews the contract before implementation.
