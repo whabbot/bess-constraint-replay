@@ -1,0 +1,264 @@
+spike bess-constraint-replay
+language typescript
+throwaway yes
+command node --experimental-strip-types scratch/spike/ts/spike.ts
+settlement_date 2026-11-18
+started_utc 2026-11-26T01:44:16Z
+proxy units that submit MDO or MDB on this date, sit in GSP _N or _P, and have a soFlag acceptance. This is a proxy, not an official constraint map.
+calendar_check july_sp1_start 2026-06-30T23:00:00Z
+calendar_check november_sp1_start 2026-11-18T00:00:00Z
+mdo_or_mdb_bm_units 200
+mdo_mdb_ids_missing_from_reference 1
+proxy_candidates_scottish_mdo_or_mdb 25
+proxy_units_with_soflag 3
+candidate 2__NFLEX001 ng AG-NFLX01 gsp _N fuel OTHER type S datasets MDB+MDO so_acceptances 0 name 2__NFLEX001 party Flexitricity Limited
+candidate 2__NFLEX009 ng AG-NFLX09 gsp _N fuel OTHER type S datasets MDB+MDO so_acceptances 0 name 2__NFLEX009 party Flexitricity Limited
+candidate 2__NSTAT005 ng AG-NSTK05 gsp _N fuel null type S datasets MDB+MDO so_acceptances 0 name STAT_N6 party Statkraft Markets Gmbh
+candidate 2__PFLEX001 ng AG-PFLX01 gsp _P fuel OTHER type S datasets MDB+MDO so_acceptances 0 name 2__PFLEX001 party Flexitricity Limited
+candidate 2__PFLEX002 ng AG-PFLX02 gsp _P fuel OTHER type S datasets MDB+MDO so_acceptances 27 name 2__PFLEX002 party Flexitricity Limited
+candidate 2__PSTAT003 ng AG-PSTK01 gsp _P fuel null type S datasets MDB+MDO so_acceptances 0 name STAT_P4 party Statkraft Markets Gmbh
+candidate E_ARBRB-1 ng ARBRB-1 gsp _P fuel OTHER type E datasets MDB+MDO so_acceptances 18 name Arbroath Battery Storage party Octopus Energy Trading Limited
+candidate E_BROXB-1 ng BROXB-1 gsp _N fuel OTHER type E datasets MDB+MDO so_acceptances 0 name BroxburnBattery party ENGIE Power Limited
+candidate E_CATHB-1 ng CATHB-1 gsp _N fuel OTHER type E datasets MDB+MDO so_acceptances 0 name CathkinBattery party ENGIE Power Limited
+candidate E_CUPAB-1 ng CUPAB-1 gsp _P fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Coupar Battery Storage party Octopus Energy Trading Limited
+candidate E_ERSKB-1 ng ERSKB-1 gsp _N fuel null type E datasets MDB+MDO so_acceptances 0 name Erskine BESS party EDF Energy Customers Limited
+candidate E_JAMBB-1 ng JAMBB-1 gsp _P fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Jamesfield 1 Battery Storage party Tesla Motors Limited
+candidate E_JAMBB-2 ng JAMBB-2 gsp _P fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Jamesfield 2 Battery Storage party Tesla Motors Limited
+candidate E_LITRB-1 ng LITRB-1 gsp _N fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Little Raith BESS party Tesla Motors Limited
+candidate E_ROARB-1 ng ROARB-1 gsp _N fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Roaring Hill BESS party Tesla Motors Limited
+candidate E_SHILB-1 ng SHILB-1 gsp _N fuel OTHER type E datasets MDB+MDO so_acceptances 0 name Shilton Lane BESS party Octopus Energy Trading Limited
+candidate V__NFEEL400 ng EDF01N gsp _N fuel null type V datasets MDB+MDO so_acceptances 0 name V__NFEEL400 party EDF Energy Limited
+candidate V__NFLEX001 ng AG-FLX02N gsp _N fuel null type V datasets MDB+MDO so_acceptances 0 name V__NFLEX001 party Flexitricity Limited
+candidate V__NHABI005 ng AG-HEL0DN gsp _N fuel OTHER type V datasets MDB+MDO so_acceptances 0 name Camilla party Habitat Energy Limited
+candidate V__PFEEL400 ng AG-EDF01P gsp _P fuel null type V datasets MDB+MDO so_acceptances 0 name V__PFEEL400 party EDF Energy Limited
+candidate V__PHABI004 ng AG-HEL0CP gsp _P fuel OTHER type V datasets MDB+MDO so_acceptances 0 name Fordtown party Habitat Energy Limited
+candidate V__PHABI006 ng AG-HEL0EP gsp _P fuel OTHER type V datasets MDB+MDO so_acceptances 0 name Glendevon party Habitat Energy Limited
+candidate V__PHABI010 ng AG-HAB01P gsp _P fuel OTHER type V datasets MDB+MDO so_acceptances 19 name Boat of Garten party Habitat Energy Limited
+candidate V__PHABI011 ng AG-HAB02P gsp _P fuel null type V datasets MDB+MDO so_acceptances 0 name Braco party Habitat Energy Limited
+candidate V__PHABI015 ng AG-HAB03P gsp _P fuel null type V datasets MDB+MDO so_acceptances 0 name Orchardbank party Habitat Energy Limited
+unit 2__PFLEX002 ng AG-PFLX02 gsp _P
+boav_bid_rows 48
+matched 48
+missing_profile 0
+worst_abs_mwh 1.776e-15
+pn_keys bmUnit dataset levelFrom levelTo nationalGridBmUnit settlementDate settlementPeriod timeFrom timeTo
+  sp 1 acceptance 16506 published_mwh -1.916667 computed_mwh -1.916667
+  sp 2 acceptance 16507 published_mwh -3.250000 computed_mwh -3.250000
+  sp 3 acceptance 16507 published_mwh -1.916667 computed_mwh -1.916667
+  sp 3 acceptance 16508 published_mwh -3.083333 computed_mwh -3.083333
+  sp 4 acceptance 16508 published_mwh -1.916667 computed_mwh -1.916667
+  sp 4 acceptance 16509 published_mwh -3.083333 computed_mwh -3.083333
+  sp 5 acceptance 16509 published_mwh -1.916667 computed_mwh -1.916667
+  sp 5 acceptance 16510 published_mwh -3.083333 computed_mwh -3.083333
+  sp 6 acceptance 16510 published_mwh -1.583333 computed_mwh -1.583333
+  sp 6 acceptance 16511 published_mwh -3.416667 computed_mwh -3.416667
+  sp 7 acceptance 16511 published_mwh -2.375000 computed_mwh -2.375000
+  sp 7 acceptance 16512 published_mwh -4.125000 computed_mwh -4.125000
+  sp 8 acceptance 16512 published_mwh -6.041667 computed_mwh -6.041667
+  sp 8 acceptance 16513 published_mwh -0.625000 computed_mwh -0.625000
+  sp 9 acceptance 16513 published_mwh -12.291667 computed_mwh -12.291667
+  sp 9 acceptance 16514 published_mwh -0.208333 computed_mwh -0.208333
+  sp 10 acceptance 16514 published_mwh -7.500000 computed_mwh -7.500000
+  sp 33 acceptance 16515 published_mwh -1.741667 computed_mwh -1.741667
+  sp 34 acceptance 16515 published_mwh -3.941667 computed_mwh -3.941667
+  sp 34 acceptance 16516 published_mwh -1.558333 computed_mwh -1.558333
+  sp 34 acceptance 16517 published_mwh -6.975000 computed_mwh -6.975000
+  sp 35 acceptance 16516 published_mwh -5.500000 computed_mwh -5.500000
+  sp 35 acceptance 16517 published_mwh -9.041667 computed_mwh -9.041667
+  sp 35 acceptance 16518 published_mwh -6.458333 computed_mwh -6.458333
+  sp 36 acceptance 16518 published_mwh -1.900000 computed_mwh -1.900000
+  sp 36 acceptance 16519 published_mwh -3.000000 computed_mwh -3.000000
+  sp 36 acceptance 16520 published_mwh -1.100000 computed_mwh -1.100000
+  sp 37 acceptance 16520 published_mwh -2.166667 computed_mwh -2.166667
+  sp 37 acceptance 16521 published_mwh -7.666667 computed_mwh -7.666667
+  sp 37 acceptance 16522 published_mwh -0.266667 computed_mwh -0.266667
+  sp 38 acceptance 16523 published_mwh -14.500000 computed_mwh -14.500000
+  sp 39 acceptance 16524 published_mwh -4.916667 computed_mwh -4.916667
+  sp 40 acceptance 16524 published_mwh -0.250000 computed_mwh -0.250000
+  sp 40 acceptance 16525 published_mwh -3.000000 computed_mwh -3.000000
+  sp 40 acceptance 16526 published_mwh -1.750000 computed_mwh -1.750000
+  sp 41 acceptance 16526 published_mwh -0.583333 computed_mwh -0.583333
+  sp 41 acceptance 16527 published_mwh -2.500000 computed_mwh -2.500000
+  sp 41 acceptance 16528 published_mwh -1.916667 computed_mwh -1.916667
+  sp 42 acceptance 16528 published_mwh -0.583333 computed_mwh -0.583333
+  sp 42 acceptance 16529 published_mwh -1.833333 computed_mwh -1.833333
+  sp 42 acceptance 16530 published_mwh -2.583333 computed_mwh -2.583333
+  sp 43 acceptance 16530 published_mwh -1.250000 computed_mwh -1.250000
+  sp 43 acceptance 16531 published_mwh -3.750000 computed_mwh -3.750000
+  sp 44 acceptance 16531 published_mwh -1.750000 computed_mwh -1.750000
+  sp 44 acceptance 16532 published_mwh -3.250000 computed_mwh -3.250000
+  sp 45 acceptance 16532 published_mwh -1.750000 computed_mwh -1.750000
+  sp 45 acceptance 16533 published_mwh -3.250000 computed_mwh -3.250000
+  sp 46 acceptance 16533 published_mwh -1.750000 computed_mwh -1.750000
+loops_confirmed 0
+loops_reason public PN rows have no submission timestamp, so a later positive FPN change cannot be timed against the system bid
+system_bid_acceptances 27
+system_bids_with_later_bid_within_3h 25
+system_bids_with_later_bid_within_6h 25
+system_bids_with_later_bid_within_12h 25
+repeated_bid_pairs_within_3h 147
+repeated_bid_pairs_within_6h 189
+repeated_bid_pairs_within_12h 189
+repeated_bid_pairs_label ordered pairs of soFlag acceptances with negative published bid volume. Not confirmed loops.
+cost_example
+label estimate of one system bid, not an attributed loop cost
+bm_unit 2__PFLEX002
+acceptance 16506
+settlement_period 1
+signed_bid_mwh -1.916667
+  pair -1 mwh -1.916667 bid_price 125.010000
+bid_component_gbp -239.602500
+offer_wavg_gbp_per_mwh 220.248894
+offer_mwh_in_sp 1471.511962
+unpriced_offer_pairs 0
+replacement_gbp 422.143714
+net_gbp 182.541214
+convention bid_component = sum(bid_price * signed_pair_mwh); replacement = offer_wavg * (-signed_bid_mwh); net = bid_component + replacement
+sign_note the Nov 2026 NESO appendix says the bid term is typically a negative cost that offsets replacement. This line follows that reading. It is an estimate.
+unit E_ARBRB-1 ng ARBRB-1 gsp _P
+boav_bid_rows 30
+matched 30
+missing_profile 0
+worst_abs_mwh 1.776e-15
+pn_keys bmUnit dataset levelFrom levelTo nationalGridBmUnit settlementDate settlementPeriod timeFrom timeTo
+  sp 30 acceptance 27574 published_mwh -0.400000 computed_mwh -0.400000
+  sp 32 acceptance 27575 published_mwh -13.533333 computed_mwh -13.533333
+  sp 32 acceptance 27576 published_mwh -0.725000 computed_mwh -0.725000
+  sp 33 acceptance 27576 published_mwh -11.841667 computed_mwh -11.841667
+  sp 33 acceptance 27577 published_mwh -2.658333 computed_mwh -2.658333
+  sp 34 acceptance 27577 published_mwh -4.241667 computed_mwh -4.241667
+  sp 34 acceptance 27578 published_mwh -3.375000 computed_mwh -3.375000
+  sp 35 acceptance 27578 published_mwh -5.325000 computed_mwh -5.325000
+  sp 35 acceptance 27579 published_mwh -6.600000 computed_mwh -6.600000
+  sp 36 acceptance 27579 published_mwh -4.700000 computed_mwh -4.700000
+  sp 36 acceptance 27580 published_mwh -5.000000 computed_mwh -5.000000
+  sp 36 acceptance 27581 published_mwh -5.250000 computed_mwh -5.250000
+  sp 37 acceptance 27581 published_mwh -2.150000 computed_mwh -2.150000
+  sp 37 acceptance 27582 published_mwh -7.283333 computed_mwh -7.283333
+  sp 37 acceptance 27583 published_mwh -0.583333 computed_mwh -0.583333
+  sp 38 acceptance 27583 published_mwh -12.283333 computed_mwh -12.283333
+  sp 38 acceptance 27584 published_mwh -4.125000 computed_mwh -4.125000
+  sp 39 acceptance 27584 published_mwh -1.475000 computed_mwh -1.475000
+  sp 39 acceptance 27585 published_mwh -6.000000 computed_mwh -6.000000
+  sp 39 acceptance 27586 published_mwh -1.650000 computed_mwh -1.650000
+  sp 40 acceptance 27586 published_mwh -0.383333 computed_mwh -0.383333
+  sp 40 acceptance 27587 published_mwh -4.433333 computed_mwh -4.433333
+  sp 40 acceptance 27588 published_mwh -2.216667 computed_mwh -2.216667
+  sp 41 acceptance 27588 published_mwh -1.766667 computed_mwh -1.766667
+  sp 41 acceptance 27589 published_mwh -5.500000 computed_mwh -5.500000
+  sp 41 acceptance 27590 published_mwh -9.075000 computed_mwh -9.075000
+  sp 42 acceptance 27590 published_mwh -2.275000 computed_mwh -2.275000
+  sp 42 acceptance 27591 published_mwh -5.600000 computed_mwh -5.600000
+  sp 42 acceptance 27592 published_mwh -4.200000 computed_mwh -4.200000
+  sp 43 acceptance 27592 published_mwh -1.400000 computed_mwh -1.400000
+loops_confirmed 0
+loops_reason public PN rows have no submission timestamp, so a later positive FPN change cannot be timed against the system bid
+system_bid_acceptances 18
+system_bids_with_later_bid_within_3h 17
+system_bids_with_later_bid_within_6h 17
+system_bids_with_later_bid_within_12h 17
+repeated_bid_pairs_within_3h 125
+repeated_bid_pairs_within_6h 153
+repeated_bid_pairs_within_12h 153
+repeated_bid_pairs_label ordered pairs of soFlag acceptances with negative published bid volume. Not confirmed loops.
+cost_example
+label estimate of one system bid, not an attributed loop cost
+bm_unit E_ARBRB-1
+acceptance 27575
+settlement_period 32
+signed_bid_mwh -13.533333
+  pair -1 mwh -13.533333 bid_price 171.780000
+bid_component_gbp -2324.756000
+offer_wavg_gbp_per_mwh 278.421185
+offer_mwh_in_sp 535.202305
+unpriced_offer_pairs 0
+replacement_gbp 3767.966703
+net_gbp 1443.210703
+convention bid_component = sum(bid_price * signed_pair_mwh); replacement = offer_wavg * (-signed_bid_mwh); net = bid_component + replacement
+sign_note the Nov 2026 NESO appendix says the bid term is typically a negative cost that offsets replacement. This line follows that reading. It is an estimate.
+unit V__PHABI010 ng AG-HAB01P gsp _P
+boav_bid_rows 43
+matched 43
+missing_profile 0
+worst_abs_mwh 3.553e-15
+pn_keys bmUnit dataset levelFrom levelTo nationalGridBmUnit settlementDate settlementPeriod timeFrom timeTo
+  sp 4 acceptance 3898 published_mwh -10.750000 computed_mwh -10.750000
+  sp 5 acceptance 3898 published_mwh -4.750000 computed_mwh -4.750000
+  sp 9 acceptance 3899 published_mwh -1.250000 computed_mwh -1.250000
+  sp 12 acceptance 3900 published_mwh -0.408333 computed_mwh -0.408333
+  sp 13 acceptance 3900 published_mwh -2.041667 computed_mwh -2.041667
+  sp 13 acceptance 3901 published_mwh -0.250000 computed_mwh -0.250000
+  sp 13 acceptance 3902 published_mwh -0.083333 computed_mwh -0.083333
+  sp 32 acceptance 3903 published_mwh -4.250000 computed_mwh -4.250000
+  sp 33 acceptance 3903 published_mwh -1.833333 computed_mwh -1.833333
+  sp 33 acceptance 3904 published_mwh -7.166667 computed_mwh -7.166667
+  sp 34 acceptance 3904 published_mwh -3.166667 computed_mwh -3.166667
+  sp 34 acceptance 3905 published_mwh -6.833333 computed_mwh -6.833333
+  sp 35 acceptance 3905 published_mwh -3.391667 computed_mwh -3.391667
+  sp 35 acceptance 3906 published_mwh -5.550000 computed_mwh -5.550000
+  sp 35 acceptance 3907 published_mwh -9.250000 computed_mwh -9.250000
+  sp 35 acceptance 3908 published_mwh -0.308333 computed_mwh -0.308333
+  sp 36 acceptance 3908 published_mwh -15.725000 computed_mwh -15.725000
+  sp 36 acceptance 3909 published_mwh -2.775000 computed_mwh -2.775000
+  sp 37 acceptance 3909 published_mwh -4.008333 computed_mwh -4.008333
+  sp 37 acceptance 3910 published_mwh -1.233333 computed_mwh -1.233333
+  sp 37 acceptance 3911 published_mwh -13.258333 computed_mwh -13.258333
+  sp 37 acceptance 3912 published_mwh 0.000000 computed_mwh 0.000000
+  sp 37 acceptance 3913 published_mwh -0.866667 computed_mwh -0.866667
+  sp 37 acceptance 3914 published_mwh -0.308333 computed_mwh -0.308333
+  sp 38 acceptance 3911 published_mwh -0.308333 computed_mwh -0.308333
+  sp 38 acceptance 3914 published_mwh -8.633333 computed_mwh -8.633333
+  sp 38 acceptance 3915 published_mwh -9.558333 computed_mwh -9.558333
+  sp 39 acceptance 3915 published_mwh -0.308333 computed_mwh -0.308333
+  sp 39 acceptance 3916 published_mwh -12.250000 computed_mwh -12.250000
+  sp 39 acceptance 3917 published_mwh -8.166667 computed_mwh -8.166667
+  sp 39 acceptance 3918 published_mwh -3.533333 computed_mwh -3.533333
+  sp 40 acceptance 3918 published_mwh -6.866667 computed_mwh -6.866667
+  sp 40 acceptance 3919 published_mwh -6.000000 computed_mwh -6.000000
+  sp 40 acceptance 3920 published_mwh -5.100000 computed_mwh -5.100000
+  sp 41 acceptance 3920 published_mwh -2.750000 computed_mwh -2.750000
+  sp 41 acceptance 3921 published_mwh -12.250000 computed_mwh -12.250000
+  sp 41 acceptance 3922 published_mwh -9.391667 computed_mwh -9.391667
+  sp 42 acceptance 3922 published_mwh -2.858333 computed_mwh -2.858333
+  sp 42 acceptance 3923 published_mwh -21.233333 computed_mwh -21.233333
+  sp 43 acceptance 3924 published_mwh -4.083333 computed_mwh -4.083333
+  sp 43 acceptance 3925 published_mwh -1.000000 computed_mwh -1.000000
+  sp 43 acceptance 3926 published_mwh -0.066667 computed_mwh -0.066667
+  sp 43 acceptance 3927 published_mwh -2.133333 computed_mwh -2.133333
+loops_confirmed 0
+loops_reason public PN rows have no submission timestamp, so a later positive FPN change cannot be timed against the system bid
+system_bid_acceptances 19
+system_bids_with_later_bid_within_3h 17
+system_bids_with_later_bid_within_6h 17
+system_bids_with_later_bid_within_12h 17
+repeated_bid_pairs_within_3h 134
+repeated_bid_pairs_within_6h 153
+repeated_bid_pairs_within_12h 153
+repeated_bid_pairs_label ordered pairs of soFlag acceptances with negative published bid volume. Not confirmed loops.
+cost_example
+label estimate of one system bid, not an attributed loop cost
+bm_unit V__PHABI010
+acceptance 3898
+settlement_period 4
+signed_bid_mwh -10.750000
+  pair -1 mwh -10.750000 bid_price 148.000000
+bid_component_gbp -1591.000000
+offer_wavg_gbp_per_mwh 226.811115
+offer_mwh_in_sp 1011.077583
+unpriced_offer_pairs 0
+replacement_gbp 2438.219490
+net_gbp 847.219490
+convention bid_component = sum(bid_price * signed_pair_mwh); replacement = offer_wavg * (-signed_bid_mwh); net = bid_component + replacement
+sign_note the Nov 2026 NESO appendix says the bid term is typically a negative cost that offsets replacement. This line follows that reading. It is an estimate.
+mdo_rows_2025_12_03_sp20 0
+neso_dataset day-ahead-constraint-flows-and-limits
+neso_fields Constraint Group, Date_ Time GMT_BST, Limit_MW, Flow_MW
+neso_rows_on_date 912
+neso_constraint_groups BOLSELEX1 CANDUNEX CANSELEX DRESHEX1 DUNSELEX ESTEX ESTEX3 ESTEX4 FLOWSTH GM_SNOW5A HARSPNBLY NINSELEX NKILGRMO SCOTEX SEIMPPR23 SSE_GRMO SSEN_S SSE_SP2 SSHARN3
+neso_bm_unit_column no
+ancillary_package dynamic-containment-data
+ancillary_resources CSV:Dynamic Containment Masterdata | CSV:DC, DR & DM Results Summary Master Data 2021-2023 | CSV:DC, DR & DM Results By Unit Master Data 2021-2023 | CSV:DC, DR & DM Linear Orders Master Data 2021-2023 | CSV:DC, DR & DM Block Orders Master Data 2021-2023
+ancillary_gap auction results are not a unit-level negative DC Low, DM Low, DR Low, or Negative Quick Reserve position for the next 3h. That flag is unknown.
+elapsed_s 6.4
+http_requests 154
+elapsed_note elapsed_s is mostly HTTP round trips. It is not a language benchmark.
