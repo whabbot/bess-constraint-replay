@@ -21,6 +21,6 @@ The default settlement date is 2026-11-18. Pass another `YYYY-MM-DD` as the firs
 
 The volume lines are the reproducibility check. `published_mwh` is Elexon BOAV `totalVolumeAccepted`. `computed_mwh` is the script. On this run the worst absolute gap was 3.553e-15 MWh across 121 rows.
 
-`loops_confirmed 0` is the loop result. The public PN payload has no submission timestamp, so the scripts do not claim a loop. The repeated-bid counts are pairs of system bids, and the files say so.
+`loops_confirmed 0` is a fixed line. Both scripts print it for every selected unit, and neither has a branch that can print another number. The public PN payload has no submission timestamp, so these scripts cannot confirm a loop. The measured counts are the repeated system-bid pairs in the same blocks: 147, 125, and 134 inside 3 hours.
 
 Cost lines are estimates for one system bid. They are not an attributed loop cost.

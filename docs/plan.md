@@ -91,7 +91,7 @@ Fail if the screen prints a pound delta when the result is `notApplied`.
 
 These stay out until a public source exists or Wail asks for them.
 
-- Calendar 2025 cost next to NESO's £58.2m and £97.9m figures. The MDO query for 2025-12-03 period 20 returned 0 rows.
+- Calendar 2025 cost next to NESO's £58.2m and £97.9m figures. Three 2025 settlement periods returned an empty `data` array. That is not a full-year scan.
 - A unit-level negative DC Low, DM Low, DR Low, or Negative Quick Reserve flag for the next 3 hours.
 - PN submission timestamps, which the public physical payload does not carry.
 - An official BM unit to constraint map.

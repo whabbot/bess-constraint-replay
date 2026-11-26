@@ -1,0 +1,7 @@
+Source: NESO, Storage Behind Constraints consultation, document 389366.
+URL: https://www.neso.energy/document/389366/download
+Read from a local copy of that PDF on 2026-11-26. The spike stdout does not contain this text.
+
+Page 26. The cost step uses bid costs (bid price and accepted bid volume) and energy replacement (the same bid volume as the offer volume, at the weighted average offer price of all accepted offers on the system in that half-hour).
+
+Page 28. The bid component is typically a negative cost to the balancing costs and offsets the replacement costs.
