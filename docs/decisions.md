@@ -132,3 +132,18 @@ The graft list above now records this. The arena sketch's third step carried a d
 ### Audit result
 
 The types row in `.audit/design-pass.tsv` called the contract settled and marked the result `open`. The contract is written and waiting on Wail. A later audit row says that.
+
+## 2026-11-26 Type sketch C arrived after the pick
+
+Decision. The contract keeps the earlier pick. Two details from the later sketch are now in `docs/types.md`. `submittedAt` uses `SubmissionTime`, a different brand from a profile `Instant`. The parser rejects a period index above `periodsInDay`, without a handwritten union of period numbers 1 through 50.
+
+Options considered.
+
+- The sketch from `grok-4.7-high-fast`, written after the pick. It agrees on the proxy label, the split between a public PN and a timestamped FPN rise, pricing only a confirmed loop, estimate money, and rule 3A as the only replay argument.
+- Putting that sketch's day-ahead window and `constraintStillRelevant: true` back on the third loop step. Left off. A day-ahead half-hour still does not show that the constraint was relevant.
+- Allowing only `unknown` for the ancillary flag. Left as is. The MVP parser returns `unknown`. `held` and `notHeld` stay in the contract for a later source.
+- Acceptance ids as strings. Left as numbers, matching the Elexon payload.
+
+Evidence. The sketch was read after it landed. The brand change is in `docs/types.md`.
+
+Who decided. The agent. Wail still reviews the contract before implementation.

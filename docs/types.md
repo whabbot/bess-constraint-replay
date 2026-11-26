@@ -10,6 +10,7 @@ A brand is a TypeScript intersection with a unique tag. The parser returns it af
 type Brand<T, B extends string> = T & { readonly __brand: B };
 
 type Instant = Brand<string, "Instant">;
+type SubmissionTime = Brand<string, "SubmissionTime">;
 type SettlementDate = Brand<string, "SettlementDate">;
 type PeriodIndex = Brand<number, "PeriodIndex">;
 type ElexonBmUnitId = Brand<string, "ElexonBmUnitId">;
@@ -24,11 +25,11 @@ type AcceptanceId = Brand<number, "AcceptanceId">;
 type ConstraintGroupName = Brand<string, "ConstraintGroupName">;
 ```
 
-`SettlementDate` is `YYYY-MM-DD` in the Europe/London settlement calendar. `Instant` is an ISO-8601 UTC timestamp. `AcceptanceId` is the Elexon acceptance number. `NonPositiveMwh` is a bid volume. The parser rejects a positive number for that brand.
+`SettlementDate` is `YYYY-MM-DD` in the Europe/London settlement calendar. `Instant` is an ISO-8601 UTC timestamp for a profile point or an acceptance time. `SubmissionTime` is a different brand. A physical-notification point time cannot be passed as `submittedAt`. `AcceptanceId` is the Elexon acceptance number. `NonPositiveMwh` is a bid volume. The parser rejects a positive number for that brand.
 
 ## Settlement period
 
-Period 1 starts at local midnight. Each period is 30 minutes. A normal day has 48 periods. A spring-forward day has 46. A clock-back day has 50. The day owns that count. A period does not repeat it.
+Period 1 starts at local midnight. Each period is 30 minutes. A normal day has 48 periods. A spring-forward day has 46. A clock-back day has 50. The day owns that count. A period does not repeat it. The parser rejects an index greater than `periodsInDay`. A 46-period day cannot carry period 47. The index is not written out as a union of every period number.
 
 ```ts
 type SettlementDay = {
@@ -129,7 +130,7 @@ type PublicPn = {
 type TimestampedFpnRise = {
 	readonly kind: "timestampedFpnRise";
 	readonly unit: ElexonBmUnitId;
-	readonly submittedAt: Instant;
+	readonly submittedAt: SubmissionTime;
 	readonly points: readonly [MwPoint, ...MwPoint[]];
 	readonly riseMw: Megawatt;
 };
