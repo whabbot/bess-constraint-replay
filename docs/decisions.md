@@ -53,4 +53,53 @@ The source file has no `# defaults` line. On a file like that, setup-pstack trea
 
 ### Cross-vendor judge
 
-Arena's cross-judge is specified as another vendor than the parent. The parent here is Grok, and every pool entry is Grok. A later arena in this repo skips that judge and says so, rather than calling Claude or Gemini.
+Arena's cross-judge is specified as another vendor than the parent. The parent here is Grok, and every pool entry is Grok. A later arena in this repo skips that judge and records the skip.
+
+## 2026-11-26 Use TypeScript for the replay backend
+
+Decision. The replay code will be TypeScript. The React screen and the volume math share one language.
+
+Options considered.
+
+- A Python service that the screen calls.
+- TypeScript only. The throwaway TypeScript spike is the seed for the volume function.
+
+Evidence. On 2026-11-26 both scripts fetched settlement date 2026-11-18. Each matched 121 Elexon BOAV bid rows for `2__PFLEX002`, `E_ARBRB-1`, and `V__PHABI010`. The worst absolute gap was 3.553e-15 MWh. The stdout is `scratch/spike/output/python.txt` and `scratch/spike/output/typescript.txt`. After dropping the language name, the command, the start time, and the elapsed time, those files match line for line.
+
+Python took 22.9s. TypeScript took 6.4s. Both made 154 HTTP requests, and TypeScript ran second. A warm server or connection reuse can explain the gap. It is not the reason for the choice. The volume match is float64 rounding of a linear integral, and the same rows match in both languages.
+
+Who decided. The agent, from that run.
+
+Wail-pending. Say if the service should be Python anyway.
+
+## 2026-11-26 Core types
+
+Decision. `docs/types.md` is the type contract. A confirmed loop needs a timestamped FPN rise and a further system bid. A public PN with no submission time is `unconfirmed`. A system-bid cost estimate is not a loop cost. A 3A result is `notApplied` or `replayed`.
+
+Options considered.
+
+- The sketch from arena runner `cursor-grok-4.6-high`, saved during the run at `/tmp/arena/candidate-b/types.md`. That sketch is the base. It brands the scalars, keeps a confirmed loop as a three-step tuple, and refuses to price an unconfirmed finding.
+- A smaller status union with no brands, and one cost function for both loops and ordinary system bids. One cost function can present an ordinary bid as loop cost, so that shape lost.
+
+Grafts on the base.
+
+- `priceSystemBid` is separate from `attributeLoopCost`.
+- `Counterfactual3A` uses `notApplied` when no non-storage action is marked. A zero delta exists only after a replay has run.
+- GSP ids stay `_N` and `_P`.
+- Acceptance ids stay numbers.
+- The day-ahead type is one half-hour with group, limit, and flow. It has no BM unit list and no inferred active flag.
+- Rules 3AA and 3AA Max are not types in this contract. They are later plan items.
+
+Arena runners were `grok-4.7-high`, `cursor-grok-4.6-high`, and `grok-4.7-high-fast`. At the pick, only `cursor-grok-4.6-high` had written a file. The cross-vendor judge did not run, because every allowed model is Grok and the parent is Grok.
+
+Who decided. The agent. Wail reviews the contract before implementation.
+
+## 2026-11-26 MVP month and 3A membership
+
+Decision. The first month is 1 November 2026 through 25 November 2026. MDO rows exist on 18 November 2026. The MDO query for 2025-12-03 settlement period 20 returned 0 rows, so calendar 2025 is outside the first sequence. Rule 3A does not invent a unit-to-constraint map. With no marked non-storage action, the result is `notApplied`.
+
+Evidence. Spike stdout for the MDO count, and NESO day-ahead fields `Constraint Group`, `Date_ Time GMT_BST`, `Limit_MW`, `Flow_MW` with no BM unit column. The cost sign follows the NESO Storage Behind Constraints consultation appendix, pages 26 to 28, document 389366.
+
+Who decided. The agent.
+
+Wail-pending. Say if the first month must be calendar 2025, and say if you want a hand list of non-storage units for a constraint group so 3A can return `replayed`.

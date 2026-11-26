@@ -1,3 +1,6 @@
 ts	phase	decision	why	evidence	result
 2026-11-26T01:41:33Z	start	started the setup and design pass	Wail asked for pstack setup, a real-data spike, core types, and a checked PR plan, then a stop	https://cursor.com/agents/bc-86fc71a3-a08b-53bc-a748-9ec567e98deb	open
 2026-11-26T01:41:33Z	pstack	pinned every current pstack role to a detected Grok slug at high effort	the invoking message requires Grok, and the hackathon-radar branch already recorded that mapping	.cursor/rules/pstack-models.mdc	open
+2026-11-26T01:47:06Z	spike	chose TypeScript after both spikes matched 121 BOAV rows	the UI is TypeScript and the volume match was the same in both languages. Elapsed time was not the reason	scratch/spike/output/python.txt scratch/spike/output/typescript.txt	VERIFIED
+2026-11-26T01:47:06Z	types	settled the core types from the cursor-grok-4.6 sketch plus grafts	confirmed loops need a timestamp, ordinary bid cost is not loop cost, and 3A with no marks is notApplied	docs/types.md	open
+2026-11-26T01:47:06Z	plan	wrote the five-PR sequence and stopped before product code	each PR has a unit, live, and perf check	docs/plan.md	open
